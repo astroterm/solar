@@ -5,6 +5,7 @@ resources:
   - ceph-csi.yaml
   - cloudnative-pg.yaml
   - kopiur.yaml
+  - openebs.yaml
   - rook-ceph.yaml
   - rook-cluster.yaml
 components:
