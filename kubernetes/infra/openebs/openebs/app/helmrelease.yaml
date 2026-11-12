@@ -1,0 +1,14 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: openebs
+spec:
+  interval: 1h
+  chartRef:
+    kind: OCIRepository
+    name: openebs
+    namespace: flux-system
+  valuesFrom:
+  - name: openebs-values
+    kind: ConfigMap

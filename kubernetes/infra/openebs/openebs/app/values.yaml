@@ -1,0 +1,16 @@
+engines:
+  replicated:
+    mayastor:
+      enabled: false
+  local:
+    hostpath:
+      enabled: false
+    zfs:
+      enabled: false
+
+loki:
+  enabled: false
+alloy:
+  enabled: false
+minio:
+  enabled: false
