@@ -7,6 +7,8 @@ engines:
       enabled: false
     zfs:
       enabled: false
+    rawfile:
+      enabled: false
 
 loki:
   enabled: false
