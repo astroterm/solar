@@ -6,4 +6,4 @@ metadata:
 spec:
   url: oci://ghcr.io/grafana/helm-charts/alloy
   ref:
-    tag: 1.15.0
+    tag: 1.16.0
