@@ -22,3 +22,6 @@ spec:
   targetNamespace: openebs
 
   path: ./kubernetes/infra/openebs/openebs/storage
+
+  dependsOn:
+    - name: openebs
