@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/cilium/cilium/refs/tags/v1.19.4/install/kubernetes/cilium/values.schema.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/cilium/cilium/refs/tags/v1.20.4/install/kubernetes/cilium/values.schema.json
 ---
 ipv4NativeRoutingCIDR: 10.244.0.0/16
 autoDirectNodeRoutes: true
@@ -26,17 +26,21 @@ bpf:
   masquerade: true
   hostLegacyRouting: false
 
-
 hubble:
   enabled: true
   relay:
     enabled: true
+  ui:
+    enabled: true
 
-# prometheus:
-#   enabled: true
-#   serviceMonitor:
-#     enabled: true
-#     trustCRDsExist: true
+prometheus:
+  enabled: true
+  serviceMonitor:
+    enabled: true
+    trustCRDsExist: true
+
+dashboards:
+  enabled: true
 
 operator:
   replicas: 1
