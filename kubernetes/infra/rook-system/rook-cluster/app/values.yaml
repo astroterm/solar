@@ -6,6 +6,10 @@ cephClusterSpec:
     useAllDevices: false
     devicePathFilter: ^/dev/disk/by-partlabel/r-osd$
 
+  dashboard:
+    enabled: true
+    ssl: true
+
   security:
     cephx:
       allowedCiphers: [aes256k]
