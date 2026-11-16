@@ -4,6 +4,7 @@ kind: Kustomization
 resources:
   - helmrelease.yaml
   - announce.yaml
+  - httproute.yaml
 components:
   - ../../../../components/helm-release
 configMapGenerator:
