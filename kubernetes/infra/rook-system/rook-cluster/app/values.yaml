@@ -8,7 +8,7 @@ cephClusterSpec:
 
   dashboard:
     enabled: true
-    ssl: true
+    ssl: false
 
   security:
     cephx:
