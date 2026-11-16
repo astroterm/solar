@@ -7,7 +7,7 @@ spec:
   enableSuperuserAccess: true
 
   storage:
-    size: 300Gi
+    size: 100Gi
     storageClass: openebs-lvm
   
   superuserSecret:
