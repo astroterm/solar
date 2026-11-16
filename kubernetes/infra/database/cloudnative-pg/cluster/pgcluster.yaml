@@ -7,8 +7,8 @@ spec:
   enableSuperuserAccess: true
 
   storage:
-    size: 100Gi
-    storageClass: longhorn-local
+    size: 300Gi
+    storageClass: openebs-lvm
   
   superuserSecret:
     name: cnpg-secret
@@ -18,20 +18,6 @@ spec:
       max_connections: "100"
       max_slot_wal_keep_size: 1GB
       shared_buffers: 64MB
-
-  # managed:
-  #   roles:
-  #   - name: nextcloud
-  #     comment: Database for Nextcloud
-  #     login: true
-  #     passwordSecret:
-  #       name: nextcloud-db
-    
-  #   - name: linkding
-  #     comment: Database for Linkding
-  #     login: true
-  #     passwordSecret:
-  #       name: linkding-db
 
   resources:
     requests:

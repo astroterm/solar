@@ -4,9 +4,9 @@ kind: Kustomization
 metadata:
   name: &app cloudnative-pg
 spec:
-  targetNamespace: &namespace cnpg-system
+  targetNamespace: &namespace database
 
-  path: ./kubernetes/infra/cnpg-system/cloudnative-pg/app
+  path: ./kubernetes/infra/database/cloudnative-pg/app
 
   healthChecks:
   - apiVersion: helm.toolkit.fluxcd.io/v2
@@ -17,11 +17,11 @@ spec:
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: &app cnpg-cluster
+  name: cnpg-cluster
 spec:
-  targetNamespace: &namespace cnpg-system
+  targetNamespace: database
 
-  path: ./kubernetes/infra/cnpg-system/cloudnative-pg/cluster
+  path: ./kubernetes/infra/database/cloudnative-pg/cluster
   
   dependsOn:
   - name: cloudnative-pg
