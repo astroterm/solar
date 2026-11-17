@@ -27,3 +27,30 @@ cephClusterSpec:
 
 toolbox:
   enabled: true
+
+cephObjectStores:
+  - name: ceph-objectstore
+    spec:
+      metadataPool:
+        failureDomain: host
+        replicated:
+          size: 3
+
+      dataPool:
+        failureDomain: host
+        erasureCoded:
+          dataChunks: 2
+          codingChunks: 1
+        parameters:
+          bulk: "false"
+
+      preservePoolsOnDelete: true
+
+      gateway:
+        port: 80
+        instances: 1
+        priorityClassName: system-cluster-critical
+
+    storageClass:
+      enabled: true
+      name: ceph-bucket
